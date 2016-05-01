@@ -7,7 +7,7 @@ namespace poincer.ViewModels
 	{
 		public CalculatorViewModel ()
 		{
-			
+
 		}
 
 		decimal fat;

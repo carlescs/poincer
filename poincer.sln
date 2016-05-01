@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "poincer", "poincer\poincer.shproj", "{03F51EC6-B886-4C9A-B72F-B412FD52F387}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poincer.iOS", "iOS\poincer.iOS.csproj", "{3B45A766-5E7B-4A38-9776-9F1F503F5818}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poincer.Droid", "Droid\poincer.Droid.csproj", "{90BD43E4-D6BC-4B4F-B46D-CD827EFC6F24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poincer", "poincer\poincer.csproj", "{414EFAF8-9D02-492B-8025-BFDD7EC0C621}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +29,18 @@ Global
 		{3B45A766-5E7B-4A38-9776-9F1F503F5818}.Release|iPhone.Build.0 = Release|iPhone
 		{3B45A766-5E7B-4A38-9776-9F1F503F5818}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{3B45A766-5E7B-4A38-9776-9F1F503F5818}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Release|iPhone.Build.0 = Release|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{90BD43E4-D6BC-4B4F-B46D-CD827EFC6F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{90BD43E4-D6BC-4B4F-B46D-CD827EFC6F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90BD43E4-D6BC-4B4F-B46D-CD827EFC6F24}.Debug|iPhone.ActiveCfg = Debug|Any CPU

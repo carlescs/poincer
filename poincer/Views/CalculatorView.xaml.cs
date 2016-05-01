@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace poincer
 {
-	public partial class CalculatorPage : ContentPage
+	public partial class CalculatorView : ContentPage
 	{
-		public CalculatorPage ()
+		public CalculatorView ()
 		{
 			InitializeComponent ();
 		}
