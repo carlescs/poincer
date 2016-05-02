@@ -20,11 +20,11 @@ Title="Calculator" >
 		</Grid.RowDefinitions>
 		<Label VerticalOptions="Center" Text="{i18n:Translate carbohydrates}" Grid.Column="0" Grid.Row="0"/>
 		<Entry Text="{Binding Carbohydrates,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="0"/>
-		<Label VerticalOptions="Center" Text="Fat" Grid.Column="0" Grid.Row="1"/>
+		<Label VerticalOptions="Center" Text="{i18n:Translate fat}" Grid.Column="0" Grid.Row="1"/>
 		<Entry Text="{Binding Fat,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="1"/>
-		<Label VerticalOptions="Center" Text="Protein" Grid.Column="0" Grid.Row="2"/>
+		<Label VerticalOptions="Center" Text="{i18n:Translate protein}" Grid.Column="0" Grid.Row="2"/>
 		<Entry Text="{Binding Protein,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="2"/>
-		<Label VerticalOptions="Center" Text="Fibre" Grid.Column="0" Grid.Row="3"/>
+		<Label VerticalOptions="Center" Text="{i18n:Translate fibre}" Grid.Column="0" Grid.Row="3"/>
 		<Entry Text="{Binding Fibre,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="3"/>
 		<Label VerticalOptions="Center" Text="{Binding Points,Mode=TwoWay}" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"/>
 	</Grid>

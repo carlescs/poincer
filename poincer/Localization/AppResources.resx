@@ -15,4 +15,13 @@
 	<data name="carbohydrates">
 		<value>Carbohydrates</value>
 	</data>
+	<data name="fat">
+		<value>Fat</value>
+	</data>
+	<data name="fibre">
+		<value>Fibre</value>
+	</data>
+	<data name="protein">
+		<value>Protein</value>
+	</data>
 </root>

@@ -52,5 +52,23 @@ namespace poincer {
                 return ResourceManager.GetString("carbohydrates", resourceCulture);
             }
         }
+        
+        internal static string fat {
+            get {
+                return ResourceManager.GetString("fat", resourceCulture);
+            }
+        }
+        
+        internal static string fibre {
+            get {
+                return ResourceManager.GetString("fibre", resourceCulture);
+            }
+        }
+        
+        internal static string protein {
+            get {
+                return ResourceManager.GetString("protein", resourceCulture);
+            }
+        }
     }
 }
