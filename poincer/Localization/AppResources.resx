@@ -24,4 +24,7 @@
 	<data name="protein">
 		<value>Protein</value>
 	</data>
+  <data name="points">
+    <value>Points</value>
+  </data>
 </root>

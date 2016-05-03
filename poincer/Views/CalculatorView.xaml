@@ -15,7 +15,6 @@ Title="Calculator" >
 			<RowDefinition Height="auto"/>
 			<RowDefinition Height="auto"/>
 			<RowDefinition Height="auto"/>
-			<RowDefinition Height="*" />
 			<RowDefinition Height="auto"/>
 		</Grid.RowDefinitions>
 		<Label VerticalOptions="Center" Text="{i18n:Translate carbohydrates}" Grid.Column="0" Grid.Row="0"/>
@@ -26,7 +25,8 @@ Title="Calculator" >
 		<Entry Text="{Binding Protein,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="2"/>
 		<Label VerticalOptions="Center" Text="{i18n:Translate fibre}" Grid.Column="0" Grid.Row="3"/>
 		<Entry Text="{Binding Fibre,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="3"/>
-		<Label VerticalOptions="Center" Text="{Binding Points,Mode=TwoWay}" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"/>
+    <Label VerticalOptions="Center" Text="{i18n:Translate points}" Grid.Column="0" Grid.Row="4" FontAttributes="Bold"/>
+		<Entry Text="{Binding Points,Mode=TwoWay}" Grid.Column="1" Grid.Row="4" IsEnabled="False" FontAttributes="Bold" />
 	</Grid>
 	</ContentPage.Content>
 	<ContentPage.BindingContext>

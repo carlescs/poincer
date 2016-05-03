@@ -11,12 +11,12 @@ namespace poincer.Localization.Util
 	[ContentProperty ("Text")]
 	public class TranslateExtension : IMarkupExtension
 	{
-		readonly CultureInfo ci;
+	    private readonly CultureInfo _ci;
 		const string ResourceId = "poincer.Localization.AppResources";
 
 		public TranslateExtension() 
 		{
-			ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo ();
+			_ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo ();
 		}
 
 		public string Text { get; set; }
@@ -29,15 +29,13 @@ namespace poincer.Localization.Util
 			ResourceManager resmgr = new ResourceManager(ResourceId
 				, typeof(TranslateExtension).GetTypeInfo().Assembly);
 
-			var translation = resmgr.GetString (Text, ci);
+			var translation = resmgr.GetString (Text, _ci);
 
 			if (translation == null) 
 			{
 				#if DEBUG
-				throw new ArgumentException (
-					String.Format ("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
-					"Text");
-				#else
+			    throw new ArgumentException($"Key '{Text}' was not found in resources '{ResourceId}' for culture '{_ci.Name}'.", nameof(Text));
+#else
 				translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
 				#endif
 			}
