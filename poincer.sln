@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poincer.iOS", "iOS\poincer.iOS.csproj", "{3B45A766-5E7B-4A38-9776-9F1F503F5818}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poincer.Droid", "Droid\poincer.Droid.csproj", "{90BD43E4-D6BC-4B4F-B46D-CD827EFC6F24}"
+	ProjectSection(ProjectDependencies) = postProject
+		{414EFAF8-9D02-492B-8025-BFDD7EC0C621} = {414EFAF8-9D02-492B-8025-BFDD7EC0C621}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poincer", "poincer\poincer.csproj", "{414EFAF8-9D02-492B-8025-BFDD7EC0C621}"
 EndProject
