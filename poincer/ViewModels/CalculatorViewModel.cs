@@ -1,90 +1,107 @@
 ﻿using System;
 using System.ComponentModel;
+using Xamarin.Forms;
 
 namespace poincer.ViewModels
 {
-	public class CalculatorViewModel:INotifyPropertyChanged
-	{
-		public CalculatorViewModel ()
-		{
+    public class CalculatorViewModel : INotifyPropertyChanged
+    {
+        private decimal _carbohydrates;
+        private decimal _fat;
+        private decimal _fibre;
+        private Page _page;
+        private decimal _protein;
 
-		}
+        public CalculatorViewModel()
+        {
+            InitCommand = new Command(Init);
+            MessagingCenter.Subscribe<Page>(this, "BindingContext.CalculatorViewModel", page => _page = page);
+        }
 
-		decimal fat;
-		public decimal Fat {
-			get {
-				return fat;
-			}
-			set {
-				if (fat != value) {
-					fat = value;
-					OnPropertyChanged (nameof (Fat));
-					OnPropertyChanged (nameof (Points));
-				}
-			}
-		}
+        private void Init()
+        {
+            _carbohydrates = 0;
+            _fat = 0;
+            _fibre = 0;
+            _protein = 0;
+            OnPropertyChanged(nameof(Carbohydrates));
+            OnPropertyChanged(nameof(Fat));
+            OnPropertyChanged(nameof(Fibre));
+            OnPropertyChanged(nameof(Protein));
+            OnPropertyChanged(nameof(Points));
+        }
 
-		decimal carbohydrates;
-		public decimal Carbohydrates {
-			get {
-				return carbohydrates;
-			}
-			set {
-				if (carbohydrates != value) {
-					carbohydrates = value;
-					OnPropertyChanged (nameof (Carbohydrates));
-					OnPropertyChanged (nameof (Points));
-				}
-			}
-		}
+        public decimal Fat
+        {
+            get { return _fat; }
+            set
+            {
+                if (_fat != value)
+                {
+                    _fat = value;
+                    OnPropertyChanged(nameof(Fat));
+                    OnPropertyChanged(nameof(Points));
+                }
+            }
+        }
 
-		decimal fibre;
-		public decimal Fibre {
-			get {
-				return fibre;
-			}
-			set {
-				if (fibre != value) {
-					fibre = value;
-					OnPropertyChanged (nameof (Fibre));
-					OnPropertyChanged (nameof (Points));
-				}
-			}
-		}
+        public decimal Carbohydrates
+        {
+            get { return _carbohydrates; }
+            set
+            {
+                if (_carbohydrates != value)
+                {
+                    _carbohydrates = value;
+                    OnPropertyChanged(nameof(Carbohydrates));
+                    OnPropertyChanged(nameof(Points));
+                }
+            }
+        }
 
-		decimal protein;
-		public decimal Protein {
-			get {
-				return protein;
-			}
-			set {
-				if (protein != value) {
-					protein = value;
-					OnPropertyChanged (nameof (Protein));
-					OnPropertyChanged (nameof (Points));
-				}
-			}
-		}
+        public decimal Fibre
+        {
+            get { return _fibre; }
+            set
+            {
+                if (_fibre != value)
+                {
+                    _fibre = value;
+                    OnPropertyChanged(nameof(Fibre));
+                    OnPropertyChanged(nameof(Points));
+                }
+            }
+        }
 
-		public decimal Points {
-			get {
-				return Math.Max((16m * Protein + 19m * Carbohydrates + 45m * Fat + 5m * Fibre) / 175m, 0);
-			}
-		}
+        public decimal Protein
+        {
+            get { return _protein; }
+            set
+            {
+                if (_protein != value)
+                {
+                    _protein = value;
+                    OnPropertyChanged(nameof(Protein));
+                    OnPropertyChanged(nameof(Points));
+                }
+            }
+        }
+
+        public decimal Points => Math.Max((16m*Protein + 19m*Carbohydrates + 45m*Fat + 5m*Fibre)/175m, 0);
+
+        public Command InitCommand { get; private set; }
+
+        #region INotifyPropertyChanged implementation
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
 
-		#region INotifyPropertyChanged implementation
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            var handler = PropertyChanged;
+            handler?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
-		public event PropertyChangedEventHandler PropertyChanged;
-
-
-		protected virtual void OnPropertyChanged (string propertyName)
-		{
-			var handler = PropertyChanged;
-			if (handler != null)
-				handler (this, new PropertyChangedEventArgs(propertyName));
-		}
-		#endregion
-	}
+        #endregion
+    }
 }
-
