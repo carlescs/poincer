@@ -6,8 +6,9 @@ namespace poincer
 	{
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new NavigationPage(new poincer.MainPage());
+		    References.NavigationPage = new NavigationPage(new poincer.MainPage());
+            // The root page of your application
+            MainPage = References.NavigationPage;
 		}
 
 		protected override void OnStart ()
@@ -25,5 +26,10 @@ namespace poincer
 			// Handle when your app resumes
 		}
 	}
+
+    public static class References
+    {
+        public static NavigationPage NavigationPage { get; set; }
+    }
 }
 

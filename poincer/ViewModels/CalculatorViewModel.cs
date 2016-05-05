@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using poincer.Settings;
 using Xamarin.Forms;
 
 namespace poincer.ViewModels
@@ -15,6 +16,7 @@ namespace poincer.ViewModels
         public CalculatorViewModel()
         {
             InitCommand = new Command(Init);
+            SettingsCommand=new Command(async ()=>await References.NavigationPage.PushAsync(new SettingsView()));
             MessagingCenter.Subscribe<Page>(this, "BindingContext.CalculatorViewModel", page => _page = page);
         }
 
@@ -90,6 +92,7 @@ namespace poincer.ViewModels
         public decimal Points => Math.Max((16m*Protein + 19m*Carbohydrates + 45m*Fat + 5m*Fibre)/175m, 0);
 
         public Command InitCommand { get; private set; }
+        public Command SettingsCommand { get; private set; }
 
         #region INotifyPropertyChanged implementation
 

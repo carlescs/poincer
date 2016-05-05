@@ -13,6 +13,7 @@
                         Android="init.png"/>
           </ToolbarItem.Icon>
         </ToolbarItem>
+      <ToolbarItem Text="Settings" Command="{Binding SettingsCommand}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <Grid Padding="10">
