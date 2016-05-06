@@ -42,9 +42,13 @@
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Settings\SettingsViewModel.cs" />
-    <Compile Include="ViewModels\CalculatorViewModel.cs" />
-    <Compile Include="Views\CalculatorView.xaml.cs">
-      <DependentUpon>CalculatorView.xaml</DependentUpon>
+    <Compile Include="ViewModels\Propoints2ViewModel.cs" />
+    <Compile Include="ViewModels\PropointsViewModel.cs" />
+    <Compile Include="Views\Propoints2View.xaml.cs">
+      <DependentUpon>Propoints2View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropointsView.xaml.cs">
+      <DependentUpon>PropointsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Localization\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
@@ -82,7 +86,7 @@
     <EmbeddedResource Include="MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\CalculatorView.xaml">
+    <EmbeddedResource Include="Views\PropointsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\AppResources.resx">
@@ -94,6 +98,13 @@
     <EmbeddedResource Include="Settings\SettingsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Propoints2View.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>
+      </SubType>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

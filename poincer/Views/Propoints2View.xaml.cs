@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace poincer.Views
 {
-	public partial class CalculatorView
+	public partial class Propoints2View
 	{
-		public CalculatorView ()
+		public Propoints2View ()
 		{
 			InitializeComponent ();
             BindingContextChanged += CalculatorView_BindingContextChanged;

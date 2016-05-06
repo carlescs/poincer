@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:poincer.ViewModels;Assembly=poincer"
+             xmlns:i18n="clr-namespace:poincer.Localization.Util;Assembly=poincer"
+             x:Class="poincer.Views.Propoints2View"
+             Title="Propoints 2">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Init" Command="{Binding InitCommand}">
+          <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource" 
+                        WinPhone="Assets/Toolbar/init.png"
+                        Android="init.png"/>
+          </ToolbarItem.Icon>
+        </ToolbarItem>
+      <ToolbarItem Text="Settings" Command="{Binding SettingsCommand}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Label VerticalOptions="Center" Text="{i18n:Translate carbohydrates}" Grid.Column="0" Grid.Row="0" />
+            <Entry Text="{Binding Carbohydrates,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="0" />
+            <Label VerticalOptions="Center" Text="{i18n:Translate fat}" Grid.Column="0" Grid.Row="1" />
+            <Entry Text="{Binding Fat,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="1" />
+            <Label VerticalOptions="Center" Text="{i18n:Translate protein}" Grid.Column="0" Grid.Row="2" />
+            <Entry Text="{Binding Protein,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="2" />
+            <Label VerticalOptions="Center" Text="{i18n:Translate fibre}" Grid.Column="0" Grid.Row="3" />
+            <Entry Text="{Binding Fibre,Mode=TwoWay}" Keyboard="Numeric" Grid.Column="1" Grid.Row="3" />
+            <Label VerticalOptions="Center" Text="{i18n:Translate points}" Grid.Column="0" Grid.Row="4"
+                   FontAttributes="Bold" />
+            <Entry Text="{Binding Points,Mode=TwoWay}" Grid.Column="1" Grid.Row="4" IsEnabled="False"
+                   FontAttributes="Bold" />
+        </Grid>
+    </ContentPage.Content>
+    <ContentPage.BindingContext>
+        <vm:Propoints2ViewModel />
+    </ContentPage.BindingContext>
+</ContentPage>

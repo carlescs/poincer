@@ -3,8 +3,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:poincer.ViewModels;Assembly=poincer"
              xmlns:i18n="clr-namespace:poincer.Localization.Util;Assembly=poincer"
-             x:Class="poincer.Views.CalculatorView"
-             Title="Calculator">
+             x:Class="poincer.Views.PropointsView"
+             Title="Propoints">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Init" Command="{Binding InitCommand}">
           <ToolbarItem.Icon>
@@ -43,6 +43,6 @@
         </Grid>
     </ContentPage.Content>
     <ContentPage.BindingContext>
-        <vm:CalculatorViewModel />
+        <vm:PropointsViewModel />
     </ContentPage.BindingContext>
 </ContentPage>
