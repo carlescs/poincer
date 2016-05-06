@@ -23,7 +23,7 @@ namespace poincer.Helpers
         public static CalculatorType CalculatorType
         {
             get { return AppSettings.GetValueOrDefault(CalculatorTypeKey, CalculatorType.Propoints); }
-            set { AppSettings.AddOrUpdateValue(CalculatorTypeKey, value); }
+            set { AppSettings.AddOrUpdateValue(CalculatorTypeKey, (int)value); }
         }
     }
 

@@ -27,4 +27,7 @@
   <data name="points">
     <value>Points</value>
   </data>
+  <data name="settings">
+    <value>Settings</value>
+  </data>
 </root>

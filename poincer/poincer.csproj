@@ -30,7 +30,9 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Controls\BindablePicker.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="poincer.cs" />
     <Compile Include="MainPage.xaml.cs">

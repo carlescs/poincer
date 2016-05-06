@@ -1,11 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:settings="clr-namespace:poincer.Settings;assembly=poincer"
-             x:Class="poincer.Settings.SettingsView">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
-  
-  <ContentPage.BindingContext>
-    <settings:SettingsViewModel />
-  </ContentPage.BindingContext>
+             xmlns:i18n="clr-namespace:poincer.Localization.Util;Assembly=poincer"
+             xmlns:controls="clr-namespace:poincer.Controls;assembly=poincer"
+             x:Class="poincer.Settings.SettingsView" Title="{i18n:Translate settings}">
+    <StackLayout Padding="10">
+        <controls:BindablePicker ItemsSource="{Binding CalculatorsTypeText,Mode=OneWay}" 
+                                 SelectedItem="{Binding CalculatorTypeText}"/>
+    </StackLayout>
+
+    <ContentPage.BindingContext>
+        <settings:SettingsViewModel />
+    </ContentPage.BindingContext>
 </ContentPage>
