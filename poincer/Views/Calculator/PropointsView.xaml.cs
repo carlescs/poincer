@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace poincer.Views
+namespace poincer.Views.Calculator
 {
 	public partial class PropointsView:ContentPage
 	{

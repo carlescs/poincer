@@ -42,12 +42,20 @@
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Settings\SettingsViewModel.cs" />
-    <Compile Include="ViewModels\Propoints2ViewModel.cs" />
-    <Compile Include="ViewModels\PropointsViewModel.cs" />
-    <Compile Include="Views\Propoints2View.xaml.cs">
+    <Compile Include="ViewModels\Calculator\CalculatorViewModel.cs" />
+    <Compile Include="ViewModels\Calculator\MenuViewModel.cs" />
+    <Compile Include="ViewModels\Calculator\Propoints2ViewModel.cs" />
+    <Compile Include="ViewModels\Calculator\PropointsViewModel.cs" />
+    <Compile Include="Views\Calculator\CalculatorView.xaml.cs">
+      <DependentUpon>CalculatorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Calculator\MenuView.xaml.cs">
+      <DependentUpon>MenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Calculator\Propoints2View.xaml.cs">
       <DependentUpon>Propoints2View.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PropointsView.xaml.cs">
+    <Compile Include="Views\Calculator\PropointsView.xaml.cs">
       <DependentUpon>PropointsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Localization\AppResources.Designer.cs">
@@ -86,12 +94,13 @@
     <EmbeddedResource Include="MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\PropointsView.xaml">
+    <EmbeddedResource Include="Views\Calculator\PropointsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Localization\AppResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -101,10 +110,22 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\Propoints2View.xaml">
+    <EmbeddedResource Include="Views\Calculator\Propoints2View.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>
       </SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Calculator\CalculatorView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Calculator\MenuView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
 </Project>

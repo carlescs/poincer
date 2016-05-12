@@ -30,4 +30,7 @@
   <data name="settings">
     <value>Settings</value>
   </data>
+  <data name="calculator">
+    <value>Calculator</value>
+  </data>
 </root>

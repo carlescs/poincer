@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:i18n="clr-namespace:poincer.Localization.Util;assembly=poincer"
+              xmlns:calculator="clr-namespace:poincer.Views.Calculator;assembly=poincer"
+                  x:Class="poincer.Views.Calculator.CalculatorView" Title="{i18n:Translate calculator}">
+    <MasterDetailPage.Master>
+      <calculator:MenuView x:Name="Menu" />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+      <calculator:PropointsView />
+    </MasterDetailPage.Detail>
+    <MasterDetailPage.BindingContext>
+      
+    </MasterDetailPage.BindingContext>
+</MasterDetailPage>

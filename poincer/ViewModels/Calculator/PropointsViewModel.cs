@@ -3,9 +3,9 @@ using System.ComponentModel;
 using poincer.Settings;
 using Xamarin.Forms;
 
-namespace poincer.ViewModels
+namespace poincer.ViewModels.Calculator
 {
-    public class Propoints2ViewModel : INotifyPropertyChanged
+    public class PropointsViewModel : INotifyPropertyChanged
     {
         private decimal _carbohydrates;
         private decimal _fat;
@@ -13,7 +13,7 @@ namespace poincer.ViewModels
         private Page _page;
         private decimal _protein;
 
-        public Propoints2ViewModel()
+        public PropointsViewModel()
         {
             InitCommand = new Command(Init);
             SettingsCommand=new Command(async ()=>await References.NavigationPage.PushAsync(new SettingsView()));
@@ -89,7 +89,7 @@ namespace poincer.ViewModels
             }
         }
 
-        public decimal Points => Math.Max(Protein / 11 + Carbohydrates / 9 + Fat / 4 + Fibre / 30, 0);
+        public decimal Points => Math.Max((16m*Protein + 19m*Carbohydrates + 45m*Fat + 5m*Fibre)/175m, 0);
 
         public Command InitCommand { get; private set; }
         public Command SettingsCommand { get; private set; }

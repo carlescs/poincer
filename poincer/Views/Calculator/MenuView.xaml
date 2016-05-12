@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:calculator="clr-namespace:poincer.ViewModels.Calculator;assembly=poincer"
+             x:Class="poincer.Views.Calculator.MenuView" Title="Menu">
+  <ListView x:Name="List" ItemsSource="{Binding Menu}" VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <TextCell Text="{Binding Title}" Command="{Binding NavigateTo}" CommandParameter="{Binding TargetType}" />
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+  <ContentPage.BindingContext>
+    <calculator:MenuViewModel/>
+  </ContentPage.BindingContext>
+</ContentPage>

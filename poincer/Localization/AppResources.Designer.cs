@@ -62,6 +62,15 @@ namespace poincer.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Calculator.
+        /// </summary>
+        internal static string calculator {
+            get {
+                return ResourceManager.GetString("calculator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Carbohydrates.
         /// </summary>
         internal static string carbohydrates {
